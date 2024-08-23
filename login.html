@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link rel="stylesheet" href="stayle.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>try login page</title>
+
+</head>
+<body>
+<div class="wrappar">
+    <form action="" onsubmit="return func(event)">
+        <h1>LOGIN</h1>
+        <div class="input-box">
+            <input type="email" placeholder="User name" id="username" required>
+            <box-icon type='solid' name='user'></box-icon>
+        </div>
+        <div class="input-box">
+            <input type="password" placeholder="password" id="password" required>
+            <box-icon name='lock-alt' type='solid' ></box-icon>
+        </div>
+        <div class="remeber-forget">
+            <label><input type="checkbox">remember me </label>
+            <a href="#">Forget password?</a>
+        </div>
+        <button type="submit" class="btn">Login</button>
+    </form>
+    <div class="registration-link">
+        <p>Don't Have a Account?</p><a href="#">Register</a>
+    </div>
+</div> 
+
+<script>
+function func(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+
+    var email = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+
+    console.log("Email entered:", email);  // Log the entered email
+    console.log("Password entered:", password);  // Log the entered password
+
+    if (email === 'hinguprem007@gmail.com' && password === '12345') {
+        alert("Successfully logged in");
+        window.location.href = "index.html";  // Redirect to the second HTML page
+    } else {
+        alert("Wrong entry");
+    }
+    return false; // Prevent form submission
+}
+</script>
+
+</body>
+</html>
